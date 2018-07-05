@@ -8,7 +8,7 @@
  * to be imported (using `require(...)`) in `routes.js`.
  */
 
-module.exports = (db) => {
+module.exports = (db) => { 
 
 
 /**
