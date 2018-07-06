@@ -23,13 +23,19 @@ module.exports = (db) => {
 
  	};
 
- 	// const addReviewData = (request, response) => {
+ 	const addReviewData = (request, response) => {
 
- 	// 	let input = request.body
+ 		let input = request.body;
+ 		console.log(input);
+ 		let username = request.cookies['username'];
 
- 	// 	db.reviews.addReview
+ 		db.reviews.addReview(input, username, (error, queryResult) => {
 
- 	// };
+ 			response.render('reviewAdded');
+
+ 		});
+
+ 	};
 
 
 
@@ -41,8 +47,8 @@ module.exports = (db) => {
  */
 
  	return {
- 		showReviewForm
- 		// addReviewData
+ 		showReviewForm,
+ 		addReviewData
 
  	};
 

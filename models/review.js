@@ -22,19 +22,16 @@ module.exports = (db) => {
 	//`dbPoolInstance` is accessible within this function scope
 	return {
 
-		// addReview: (title, review, rating, username, callback) => {
+		addReview: (input, username, callback) => {
 
-		// 	const queryString = 'INSERT INTO reviews (username, title, description, rating) VALUES ($1, $2, $3, $4) RETURNING *';
+			const queryString = 'INSERT INTO reviews (username, title, description, rating) VALUES ($1, $2, $3, $4) RETURNING *';
 
-		// 	const values = [
-		// 		username,
-		// 		title,
-		// 		description,
-		// 		rating
-		// 	];
+			const values = [username, input.title, input.description, input.rating];
 
-		// 	db.query(queryString, values, callback);
-		// }
+			console.log(values);
+
+			db.query(queryString, values, callback);
+		}
 
 
 	};

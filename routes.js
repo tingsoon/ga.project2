@@ -36,7 +36,7 @@ module.exports = (app, db) => {
 
 	// reviews
 	app.get('/review', review.showReviewForm);
-	// app.post('/review', review.addReviewData);
+	app.post('/review', review.addReviewData);
 
 
 
