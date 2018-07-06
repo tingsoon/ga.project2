@@ -13,6 +13,7 @@ module.exports = (app, db) => {
 
 	const users = require('./controllers/user.js')(db);
 	const hawkers = require('./controllers/hawkers')(db);
+	const review = require('./controllers/review')(db);
 
 	// users
 	app.get('/users/new', users.newUserForm);
@@ -24,10 +25,18 @@ module.exports = (app, db) => {
 
 	// hawkers
 	app.get('/home', hawkers.home);
-	app.post('/home', hawkers.search)
+	app.post('/home', hawkers.search);
+	// app.post('/home', hawkers.searchNorth);
+	app.get('/hawkers/north', hawkers.searchNorth);
+	app.get('/hawkers/west', hawkers.searchWest);
+	app.get('/hawkers/east', hawkers.searchEast);
+	app.get('/hawkers/central', hawkers.searchCentral);		
 	app.get('/hawkercentres', hawkers.showAllHawkers);
 	app.put('/hawkercentres/:id', hawkers.showHawkerCentre);
 
+	// reviews
+	app.get('/review', review.showReviewForm);
+	// app.post('/review', review.addReviewData);
 
 
 

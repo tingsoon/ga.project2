@@ -19,3 +19,12 @@ CREATE TABLE IF NOT EXISTS hawkerCentres (
   img varchar(255),
   region varchar(255)
 );
+
+-- create review table
+CREATE TABLE IF NOT EXISTS reviews (
+  id SERIAL PRIMARY KEY,
+  username varchar(255),
+  title TEXT,
+  description TEXT,
+  rating numeric
+);

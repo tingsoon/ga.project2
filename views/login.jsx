@@ -11,9 +11,9 @@ class Login extends React.Component {
 		    		<h1>HAWKERLAH!</h1>
 		    		<p></p>
 		    		<form action="/users/login" method="POST">
-		    			<input name="username" type="text" placeholder="username" />
-		    			<input name="password" type="text" placeholder="password"/>
-		    			<input name="submit" type="submit" />
+		    			<input className="username" type="text" name="username" placeholder="username" />
+		    			<input className="password" type="text" name="password" placeholder="password"/>
+		    			<input className="submit" type="submit" />
 		    		</form>
 	    		</div>
 	    		<p></p>

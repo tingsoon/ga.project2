@@ -24,7 +24,6 @@ module.exports = (db) => {
 
  	const search = (request, response) => {
 
- 		// let inputSearch = request.body;
  		let input = request.body.hawkerCentre;
 
  		db.hawkers.searchHawker(input, (error, queryResult) => {
@@ -34,7 +33,7 @@ module.exports = (db) => {
  			} else {
 
  				const queryRows = queryResult.rows;
- 				console.log(queryRows);
+ 				// console.log(queryRows);
 
  				// no search values
  				if (queryRows.length < 1) {
@@ -48,6 +47,97 @@ module.exports = (db) => {
  				}
  			}
 
+ 		});
+
+ 	};
+
+ 	const searchNorth = (request, response) => {
+
+ 		let smth;
+
+ 		db.hawkers.searchNorthHawkers(smth, (error, queryResult) => {
+ 			
+ 			if (error) {
+ 				console.error('query error 1: ', error.stack);
+ 			} else { 
+
+ 				const queryRows = queryResult.rows;
+
+ 				const data = {
+ 					search_hawkers: queryRows
+ 				};
+
+ 				response.render('searchHawkers', data);
+ 			}
+ 		});
+
+ 	};
+
+
+ 	const searchWest = (request, response) => {
+
+ 		let smth;
+
+ 		db.hawkers.searchWestHawkers(smth, (error, queryResult) => {
+ 			
+ 			if (error) {
+ 				console.error('query error 1: ', error.stack);
+ 			} else { 
+
+ 				const queryRows = queryResult.rows;
+
+ 				const data = {
+ 					search_hawkers: queryRows
+ 				};
+
+ 				response.render('searchHawkers', data);
+ 			}
+ 		});
+
+ 	};
+
+
+ 	const searchEast = (request, response) => {
+
+ 		let smth;
+
+ 		db.hawkers.searchEastHawkers(smth, (error, queryResult) => {
+ 			
+ 			if (error) {
+ 				console.error('query error 1: ', error.stack);
+ 			} else { 
+
+ 				const queryRows = queryResult.rows;
+
+ 				const data = {
+ 					search_hawkers: queryRows
+ 				};
+
+ 				response.render('searchHawkers', data);
+ 			}
+ 		});
+
+ 	};
+
+
+ 	const searchCentral = (request, response) => {
+
+ 		let smth;
+
+ 		db.hawkers.searchCentralHawkers(smth, (error, queryResult) => {
+ 			
+ 			if (error) {
+ 				console.error('query error 1: ', error.stack);
+ 			} else { 
+
+ 				const queryRows = queryResult.rows;
+
+ 				const data = {
+ 					search_hawkers: queryRows
+ 				};
+
+ 				response.render('searchHawkers', data);
+ 			}
  		});
 
  	};
@@ -110,6 +200,10 @@ module.exports = (db) => {
  	return {
  		home,
  		search,
+ 		searchNorth,
+ 		searchWest,
+ 		searchEast,
+ 		searchCentral,
  		showAllHawkers,
  		showHawkerCentre
 

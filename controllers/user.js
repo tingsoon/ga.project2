@@ -40,8 +40,10 @@ module.exports = function(db){
   const create = (request, response) => {
 
     // create a user
-    let password_hash = sha256(request.body.password);
     let username = request.body.username;
+    console.log(username);
+    let password_hash = sha256(request.body.password);
+    
 
     db.users.checkUserName(username, (error, queryResult) => {
 
@@ -108,12 +110,15 @@ module.exports = function(db){
 
           let user_id = queryRows[0].id;
 
+          let username = queryRows[0].username;
+
           let currentSessionCookie = sha256(user_id + 'logged_in' + SALT);
 
           if (db_pass_hash === request_pass_hash) {
 
             response.cookie('logged_in', currentSessionCookie);
             response.cookie('user_id', user_id);
+            response.cookie('username', username);
 
             response.redirect('/home')
           } else {
@@ -130,6 +135,7 @@ module.exports = function(db){
   const logout = (request, response) => {
 
     response.clearCookie('user_id');
+    response.clearCookie('username');
     response.clearCookie('logged_in');
     response.redirect('/users/login');
 

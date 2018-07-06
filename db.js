@@ -12,6 +12,7 @@
 const pg = require('pg');
 const users = require('./models/user');
 const hawkers = require('./models/hawkers');
+const reviews = require('./models/review');
 
  const configs = {
   user: 'angtingsoon',
@@ -33,6 +34,7 @@ module.exports = {
    
   users: users(pool),
   hawkers: hawkers(pool),
+  reviews: reviews(pool),
 
   // get a reference to end the connection pool at server end
   pool:pool

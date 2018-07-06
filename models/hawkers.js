@@ -60,6 +60,34 @@ module.exports = (db) => {
 
 			db.query(queryString, values, callback);
 
+		},
+
+		searchNorthHawkers: (smth, callback) => {
+
+			const queryString = "SELECT * FROM hawkercentres WHERE region = 'north'";
+
+		db.query(queryString, callback);
+		},
+
+		searchWestHawkers: (smth, callback) => {
+
+			const queryString = "SELECT * FROM hawkercentres WHERE region = 'west'";
+
+		db.query(queryString, callback);
+		},
+
+		searchEastHawkers: (smth, callback) => {
+
+			const queryString = "SELECT * FROM hawkercentres WHERE region = 'east'";
+
+		db.query(queryString, callback);
+		},
+
+		searchCentralHawkers: (smth, callback) => {
+
+			const queryString = "SELECT * FROM hawkercentres WHERE region = 'central'";
+
+		db.query(queryString, callback);
 		}
 
 
