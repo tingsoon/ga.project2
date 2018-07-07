@@ -19,11 +19,30 @@
   background-position: center;
 }
 
+#central {
+  background-image: url(https://magazine.foodpanda.sg/wp-content/uploads/sites/2/2016/08/Best-Satay-Header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#west {
+  background-image: url(http://www.shape.com.sg/wp-content/uploads/2017/08/How-to-make-Singapore-hawker-food-healthier-640x426.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .location {
   width: 400px;
   height: 400px;
   display: inline-block;
   margin: 50px;
+  opacity: 0.5;
+  transition: .5s ease;
+  background-color: #525456;
+}
+
+.location:hover {
+  opacity: 1;
 }
 
 .location-name {
@@ -31,7 +50,7 @@
   display: block;
   position: relative;
   top: 40%;
-  left: 40%;
+  left: 38%;
   font-weight: bold;
   font-size: 3em;
   text-decoration: none;
@@ -42,6 +61,12 @@
   width: 1000px;
   margin: 0 auto;
 }
+
+.row-2 {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 
 #imagebox {
   width: 1000px;
