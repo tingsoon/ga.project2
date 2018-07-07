@@ -26,7 +26,6 @@ module.exports = (app, db) => {
 	// hawkers
 	app.get('/home', hawkers.home);
 	app.post('/home', hawkers.search);
-	// app.post('/home', hawkers.searchNorth);
 	app.get('/hawkers/north', hawkers.searchNorth);
 	app.get('/hawkers/west', hawkers.searchWest);
 	app.get('/hawkers/east', hawkers.searchEast);
@@ -35,8 +34,9 @@ module.exports = (app, db) => {
 	app.put('/hawkercentres/:id', hawkers.showHawkerCentre);
 
 	// reviews
-	app.get('/review', review.showReviewForm);
-	app.post('/review', review.addReviewData);
+	app.get('/hawkercentres/:id/review', review.showReviewForm);
+	app.post('/hawkercentres/:id/review', review.addReviewData);
+	app.delete('/hawkercentres/reviewAdded', review.reviewAdded);
 
 
 

@@ -19,21 +19,32 @@ module.exports = (db) => {
 
  	const showReviewForm = (request, response) => {
 
+ 		console.log(request.params.id);
+ 		let hawkerId = parseInt(request.params.id);
+ 		response.cookie('hawkerId', hawkerId);
  		response.render('addReview');
 
  	};
 
  	const addReviewData = (request, response) => {
 
+ 		let hawkerId = parseInt(request.cookies['hawkerId']);
+ 		console.log(hawkerId);
  		let input = request.body;
- 		console.log(input);
  		let username = request.cookies['username'];
 
- 		db.reviews.addReview(input, username, (error, queryResult) => {
+ 		db.reviews.addReview(input, username, hawkerId, (error, queryResult) => {
 
- 			response.render('reviewAdded');
+ 			response.render('reviewAdded', {id: hawkerId});
 
  		});
+
+ 	};
+
+ 	const reviewAdded = (request, response) => {
+
+ 		response.clearCookie('hawkerId');
+ 		response.redirect('/home');
 
  	};
 
@@ -48,7 +59,8 @@ module.exports = (db) => {
 
  	return {
  		showReviewForm,
- 		addReviewData
+ 		addReviewData,
+ 		reviewAdded
 
  	};
 

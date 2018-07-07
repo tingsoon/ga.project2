@@ -11,7 +11,9 @@ class SearchHawkers extends React.Component {
   		return (
   			
   			<div className="col-4">
-
+          <div className="col-sm pic_container">
+            <img src ={hawker.img} />
+          </div>
 	  			<div className="text">
 	  				<p>{hawker.name}</p>
 	  			</div>
@@ -41,7 +43,7 @@ class SearchHawkers extends React.Component {
                   <div className="buttonDiv">
                       <input className="logout" type="submit" value="Logout" />
                   </div>
-                </form>
+              </form>
           </div>
 	      	<p></p>
 	      	<div className="container">

@@ -176,7 +176,7 @@ module.exports = (db) => {
  				if (queryResult.rows.length > 0) {
 
  					queryResult.rows[0].region = queryResult.rows[0].region.charAt(0).toUpperCase() + queryResult.rows[0].region.slice(1);
- 					console.log(queryResult.rows[0].region);
+ 					console.log(queryResult.rows[0].id);
 
  					response.render('showHawker', { hawker : queryResult.rows[0] });
  				} else {

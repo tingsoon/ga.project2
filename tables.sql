@@ -26,5 +26,6 @@ CREATE TABLE IF NOT EXISTS reviews (
   username varchar(255),
   title TEXT,
   description TEXT,
-  rating numeric
+  rating numeric,
+  hawkerId numeric
 );

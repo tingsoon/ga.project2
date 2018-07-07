@@ -11,7 +11,9 @@ class ShowAllHawkers extends React.Component {
   		return (
   			
   			<div className="col-4">
-
+          <div className="col-sm pic_container">
+            <img src ={hawker.img} />
+          </div>
 	  			<div className="text">
 	  				<p>{hawker.name}</p>
 	  			</div>

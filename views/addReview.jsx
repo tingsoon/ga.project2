@@ -5,21 +5,24 @@ var LayoutContainer = require('./layout.jsx');
 class Review extends React.Component {
   render() {
 
+  	let formAction = '/hawkercentres/' + this.props.id + '/review'
+
     return (
     	<LayoutContainer>
 
 	    	<div>
 	    		<div>
 	    		<h1>Add Review</h1>
-	    			<form action="/review" method="POST">
-	    				<div class="form-group">
+	    			<form action={formAction} method="POST">
+	    				<div className="form-group">
 		    				<input type="text" name="title" className="title form-control" placeholder="Enter Title" />
 		    			</div>
 		    			<p></p>
-		    			 <div class="form-group">
+		    			 <div className="form-group">
 		    			<textarea name="description" className="review form-control" id="textBox" placeholder="Description"></textarea>
 		    			</div>
 		    			<p></p>
+		    			<p>Ratings</p>
 		    			<select name="rating" id="example">
 						  <option value="1">1</option>
 						  <option value="2">2</option>
@@ -28,7 +31,7 @@ class Review extends React.Component {
 						  <option value="5">5</option>
 						</select>
 						<p></p>
-		    			<button type="submit" class="btn btn-primary">Submit</button>
+		    			<button type="submit" className="btn btn-primary">Submit</button>
 	    		</form>
 	    		</div>
 

@@ -8,7 +8,7 @@ class ReviewAdded extends React.Component {
     	<LayoutContainer>
 	    	<div>
 	    		<h1>Review Added</h1>
-		    		<form className="goBackHomePage" method="GET" action='/home'>
+		    		<form className="goBackHomePage" method="POST" action='/hawkercentres/reviewAdded?_method=DELETE'>
 		                <input type="hidden" name="goBackHomePage" />
 		                <div className="buttonDiv">
 		                	<input className="goBackHomePage" type="submit" value="Return To Home Page." />
