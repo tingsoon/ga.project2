@@ -7,15 +7,45 @@
   min-height: 1200px;
 }
 
-.imgResize{
-  height: 400px;
-  max-width: 600px;
-  display: inline-block;
-  padding: 10px;
+#north {
+  background-image: url(https://keeprecipes.com/sites/keeprecipes/files/imagecache/recipe_large/nasi_goreng_seafood_tom_yam_0000x0000_0_1.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
-.img4 {
-  text-align: center;
+#east {
+  background-image: url(http://foodtravelbabe.com/wp-content/uploads/2018/01/tian-tian-hainanese-chicken-rice.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.location {
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  margin: 50px;
+}
+
+.location-name {
+  color: white;
+  display: block;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  font-weight: bold;
+  font-size: 3em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.row-1 {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#imagebox {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .col-4 {

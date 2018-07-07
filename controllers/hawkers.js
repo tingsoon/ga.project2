@@ -187,7 +187,21 @@ module.exports = (db) => {
  							if (result.rows.length > 0) {
 
  								hawkerReviews = result.rows;
+
+ 								for(let i=0; i<result.rows.length; i++) {
+ 									hawkerReviews[i].username = "Reviewed By : " + hawkerReviews[i].username;
+ 									hawkerReviews[i].rating = "Ratings : " + hawkerReviews[i].rating + " / 5";
+ 								}
+
  								response.render('showHawker', { hawker : hawkerData, reviews : hawkerReviews });
+ 							} else {
+
+ 								hawkerNoReviews = result.rows;
+ 								hawkerNoReviews.title = "No reviews yet";
+ 								hawkerNoReviews.username = " ";
+ 								hawkerNoReviews.ratings = " ";
+ 								hawkerNoReviews.description = " ";
+ 								response.render('showHawker', { hawker : hawkerData, reviews : hawkerNoReviews });
  							}
  						}
 

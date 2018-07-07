@@ -20,8 +20,8 @@ class ShowHawker extends React.Component {
 	      	<div className="col-sm hawkerReviews">
 	      		<h4>{review.title}</h4>
 	      	<ul className="list-unstyled">
-	      		<li>Reviewed By {review.username} </li>
-		      	<li>Ratings : {review.rating} / 5 </li>
+	      		<li>{review.username} </li>
+		      	<li>{review.rating}</li>
 		      	<li>{review.description} </li>
 	      	</ul>
 	      	</div>
@@ -60,7 +60,7 @@ class ShowHawker extends React.Component {
 		    		<form className="writeReview" method="GET" action={formAction}>
 	                <input type="hidden" name="writeReview" />
 	                <div className="buttonDiv">
-	                	<input className="writeReview" type="submit" value="Write a review." />
+	                	<input className="writeReview" type="submit" value="Write a review" />
 		            </div>
 		            </form>
        		    </div>
