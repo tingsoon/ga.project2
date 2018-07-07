@@ -1,10 +1,11 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 class SearchHawkers extends React.Component {
   render() {
 
-  	let message = <h1>Search Results</h1>;
+  	let message = <h1 id="listTitle">Search Results</h1>;
 
   	const searchHawkerData = this.props.search_hawkers.map( function(hawker) {
 
@@ -12,7 +13,7 @@ class SearchHawkers extends React.Component {
   			
   			<div className="col-4">
           <div className="col-sm pic_container">
-            <img src ={hawker.img} />
+            <img src ={hawker.img} className="img-thumbnail" id="imgpic"/>
           </div>
 	  			<div className="text">
 	  				<p>{hawker.name}</p>
@@ -34,16 +35,12 @@ class SearchHawkers extends React.Component {
 
     return (
     	<LayoutContainer>
-	      <div>
+        <NavbarContainer>
+        </NavbarContainer>
+	      <div className="hawkerPage">
 	      	{message}
 	      	<p></p>
           <div>
-            	<form className="logout" method="POST" action="/users/logout?_method=DELETE">
-                  <input type="hidden" name="logout" />
-                  <div className="buttonDiv">
-                      <input className="logout" type="submit" value="Logout" />
-                  </div>
-              </form>
           </div>
 	      	<p></p>
 	      	<div className="container">

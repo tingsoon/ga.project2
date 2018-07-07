@@ -1,11 +1,14 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 class ReviewAdded extends React.Component {
   render() {
 
     return (
     	<LayoutContainer>
+        <NavbarContainer>
+        </NavbarContainer>
 	    	<div>
 	    		<h1>Review Added</h1>
 		    		<form className="goBackHomePage" method="POST" action='/hawkercentres/reviewAdded?_method=DELETE'>

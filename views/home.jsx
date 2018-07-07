@@ -1,11 +1,14 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 class Home extends React.Component {
   render() {
 
     return (
     	<LayoutContainer>
+    	<NavbarContainer>
+        </NavbarContainer>
 	    	<div>
 	    		<div>
 		    		<h1>WELCOME TO HAWKERLAH!</h1>

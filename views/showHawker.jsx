@@ -1,5 +1,6 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 class ShowHawker extends React.Component {
 
@@ -13,6 +14,8 @@ class ShowHawker extends React.Component {
   	const hidden={display:'none'}
     return (
     	<LayoutContainer>
+    	<NavbarContainer>
+        </NavbarContainer>
     		{/* This trick allows var to be called in a global level  */}
     		<span id="hawkerName" style={hidden}>{this.props.hawker.name}</span>
     		<span id="hawkerAddress" style={hidden}>{this.props.hawker.address}</span>

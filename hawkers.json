@@ -1323,7 +1323,9 @@
         "city": "Singapore",
         "country": "SG",
         "lat": 1.303831,
-        "lng": 103.764132
+        "lng": 103.764132,
+        "description" : "Built in 1980, the hawker centre at Blk 726 Clementi West Street 2 consists of 60 cooked food stalls and 135 market stalls. The centre is conveniently located in close proximity to schools, housing estates and shopping complex.",
+        "img" : "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155262246.jpg"
     },
     {
         "name": "Toa Payoh Vista Market",

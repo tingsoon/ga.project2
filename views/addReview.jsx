@@ -1,5 +1,6 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 
 class Review extends React.Component {
@@ -9,7 +10,8 @@ class Review extends React.Component {
 
     return (
     	<LayoutContainer>
-
+        <NavbarContainer>
+        </NavbarContainer>
 	    	<div>
 	    		<div>
 	    		<h1>Add Review</h1>

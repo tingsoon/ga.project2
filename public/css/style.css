@@ -2,6 +2,19 @@ body {
 	background-color: #87ceeb;
 }
 
+.col-4 {
+  padding: 20px;
+}
+
+.hawkerPage {
+  position: relative;
+  top: 50px;
+}
+
+#listTitle {
+  text-align: center;
+}
+
 #map {
   height: 400px;
   width: 400px;
@@ -21,7 +34,7 @@ body {
 	width: 500px;
 }
 
-.pic_container{
-    height: 100px;
-    width: 100px;
+#imgpic {
+    min-height: 280px;
+    min-width: 200px;
 }

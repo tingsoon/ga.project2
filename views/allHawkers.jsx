@@ -1,10 +1,11 @@
 var React = require('react');
 var LayoutContainer = require('./layout.jsx');
+var NavbarContainer = require('./navbarlayout.jsx');
 
 class ShowAllHawkers extends React.Component {
   render() {
 
-  	let message = <h1>List of Hawker Centres in Singapore</h1>;
+  	let message = <h1 id="listTitle">List of Hawker Centres in Singapore</h1>;
 
   	const allHawkerData = this.props.all_hawkers.map( function(hawker) {
 
@@ -12,7 +13,7 @@ class ShowAllHawkers extends React.Component {
   			
   			<div className="col-4">
           <div className="col-sm pic_container">
-            <img src ={hawker.img} />
+            <img src ={hawker.img} className="img-thumbnail" id="imgpic"/>
           </div>
 	  			<div className="text">
 	  				<p>{hawker.name}</p>
@@ -21,7 +22,7 @@ class ShowAllHawkers extends React.Component {
 		            <form className="goToHawkerCentre" method="POST" action={'/hawkercentres/'+hawker.id+'?_method=PUT'}>
 		                <input type="hidden" name="goToHawkerCentre" />
 		                <div className="buttonDiv">
-		                    <input className="goToHawkerCentre" type="submit" value="View Hawker Centre" />
+		                    <input className="goToHawkerCentre" type="submit" value="View" />
 		                </div>
 		            </form>
           		</div>
@@ -34,17 +35,11 @@ class ShowAllHawkers extends React.Component {
 
     return (
     	<LayoutContainer>
-	      <div>
+        <NavbarContainer>
+        </NavbarContainer>
+	      <div className="hawkerPage">
 	      	{message}
 	      	<p></p>
-          <div>
-            	<form className="logout" method="POST" action="/users/logout?_method=DELETE">
-                  <input type="hidden" name="logout" />
-                  <div className="buttonDiv">
-                      <input className="logout" type="submit" value="Logout" />
-                  </div>
-                </form>
-          </div>
 	      	<p></p>
 	      	<div className="container">
   			<div className="row">
