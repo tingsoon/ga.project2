@@ -176,9 +176,24 @@ module.exports = (db) => {
  				if (queryResult.rows.length > 0) {
 
  					queryResult.rows[0].region = queryResult.rows[0].region.charAt(0).toUpperCase() + queryResult.rows[0].region.slice(1);
- 					console.log(queryResult.rows[0].id);
 
- 					response.render('showHawker', { hawker : queryResult.rows[0] });
+ 					hawkerData = queryResult.rows[0];
+
+ 					db.hawkers.getReview(hawkerId, (err, result) => {
+
+ 						if (err) {
+ 							console.error('error 3 getting reviews: ', err.message);
+ 						} else {
+ 							if (result.rows.length > 0) {
+
+ 								hawkerReviews = result.rows;
+ 								response.render('showHawker', { hawker : hawkerData, reviews : hawkerReviews });
+ 							}
+ 						}
+
+ 					});
+
+ 					
  				} else {
  					response.send('Hawker Centre not found.')
  				}

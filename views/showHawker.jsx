@@ -12,6 +12,23 @@ class ShowHawker extends React.Component {
 
   	let formAction = '/hawkercentres/' + this.props.hawker.id + '/review';
   	const hidden={display:'none'}
+
+
+  	const allHawkerReviews = this.props.reviews.map( function(review) {
+
+  		return (
+	      	<div className="col-sm hawkerReviews">
+	      		<h4>{review.title}</h4>
+	      	<ul className="list-unstyled">
+	      		<li>Reviewed By {review.username} </li>
+		      	<li>Ratings : {review.rating} / 5 </li>
+		      	<li>{review.description} </li>
+	      	</ul>
+	      	</div>
+  		)
+  	});
+
+
     return (
     	<LayoutContainer>
     	<NavbarContainer>
@@ -29,7 +46,7 @@ class ShowHawker extends React.Component {
 		      	</div>
 		      	<div className="col-sm information">
 		      	<h1>{this.props.hawker.name}</h1>
-		      	<ul>
+		      	<ul className="list-unstyled">
 			      	<li>Address : {this.props.hawker.address} </li>
 			      	<li>Region : {this.props.hawker.region} </li>
 			      	<li>Number of Stalls : {this.props.hawker.cookedfoodstalls} </li>
@@ -46,7 +63,8 @@ class ShowHawker extends React.Component {
 	                	<input className="writeReview" type="submit" value="Write a review." />
 		            </div>
 		            </form>
-       		   </div>
+       		    </div>
+       		   	{allHawkerReviews}
 		      	<script src="/script.js"></script>
 		      	<script async defer
 				  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0eLkjdHUsR_SX4Eon_CP8OdW4Qa4aztU&callback=initMap">

@@ -13,7 +13,9 @@ class LayoutContainer extends React.Component {
     			<title>HawkerLah!</title>   
   		</head>
   		<body>
+        <div id="background-image">
   			{this.props.children}
+        </div>
   		</body>
   	</html> );
 

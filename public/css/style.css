@@ -1,5 +1,21 @@
-body {
-	background-color: #87ceeb;
+
+#background-image {
+	background-image: url(/wallpaperhawker.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 1200px;
+}
+
+.imgResize{
+  height: 400px;
+  max-width: 600px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.img4 {
+  text-align: center;
 }
 
 .col-4 {

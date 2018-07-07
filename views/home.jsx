@@ -10,16 +10,24 @@ class Home extends React.Component {
     	<NavbarContainer>
         </NavbarContainer>
 	    	<div>
-	    		<div>
-		    		<h1>WELCOME TO HAWKERLAH!</h1>
+	    		<div className="jumbotron">
+		    		<h1 className="display-3">WELCOME TO HAWKERLAH!</h1>
 		    		<p>Search for Hawker Centres</p>
 		    		<form action="/home" method="POST">
 		    			<input name="hawkerCentre" type="text" />
 		    			<input name="submit" type="submit" />
 		    		</form>
-	    		</div>
-	    		<p></p>
-	    		<h2>Search by Regions</h2>
+		    	<hr className="my-4" />
+	    		<div>
+				  	<div className="img4">
+				      <img className="imgResize " src={"https://keeprecipes.com/sites/keeprecipes/files/imagecache/recipe_large/nasi_goreng_seafood_tom_yam_0000x0000_0_1.jpg"} />
+				      <img className="imgResize " src={"http://foodtravelbabe.com/wp-content/uploads/2018/01/tian-tian-hainanese-chicken-rice.jpg"} />
+				      <img className="imgResize " src={"https://magazine.foodpanda.sg/wp-content/uploads/sites/2/2016/08/Best-Satay-Header.jpg"} />
+				      <img className="imgResize " src={"http://www.shape.com.sg/wp-content/uploads/2017/08/How-to-make-Singapore-hawker-food-healthier-640x426.jpg"} />
+				    </div>
+				</div>
+	    		<hr className="my-4" />
+	    		<h2 className="display-4">Search by Regions</h2>
 	    		<div>
 		    		<form className="searchNorth" method="GET" action='/hawkers/north'>
 	                <input type="hidden" name="searchNorth" />
@@ -51,7 +59,8 @@ class Home extends React.Component {
 	                	<input className="searchWest" type="submit" value="West" />
 		            </div>
 		            </form>
-       		   </div>       		   
+       		   </div>
+       		   </div>     		   
 	    	</div>
     	</LayoutContainer>
     );
