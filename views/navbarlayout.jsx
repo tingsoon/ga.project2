@@ -5,7 +5,11 @@ class LayoutContainer extends React.Component {
 
   	return ( 
         <nav className="navbar navbar-dark bg-dark">
-          <a className="navbar-brand" href="http://localhost:3000/home" >HawkerLah</a>
+          <a className="navbar-brand" href="http://localhost:3000/home" >
+          <div id="navLogo">
+          </div>
+          <div id="navWord">HawkerLah</div>
+          </a>
               <form className="logout form-inline" method="POST" action="/users/logout?_method=DELETE">
                   <input type="hidden" name="logout" className="form-control mr-sm-2"/>
                   <div className="buttonDiv">

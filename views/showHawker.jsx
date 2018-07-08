@@ -22,8 +22,8 @@ class ShowHawker extends React.Component {
 	      	<ul className="list-unstyled">
 	      		<li>{review.username} </li>
 		      	<li>{review.rating}</li>
-		      	<li>{review.description} </li>
 	      	</ul>
+	      	<p>{review.description}</p>
 	      	</div>
   		)
   	});
@@ -40,10 +40,12 @@ class ShowHawker extends React.Component {
     			var lat = {this.props.hawker.lat};
     			var lng = {this.props.hawker.lng};
     		</script>
+    		<p></p>
  			<div className="container">
  				<div className="col-sm pic_container">
  					<img src ={this.props.hawker.img} />
 		      	</div>
+		      	<p></p>
 		      	<div className="col-sm information">
 		      	<h1>{this.props.hawker.name}</h1>
 		      	<ul className="list-unstyled">
@@ -53,6 +55,7 @@ class ShowHawker extends React.Component {
 			      	<li>{this.props.hawker.description} </li>
 		      	</ul>
 		      	</div>
+		      	<div className="container">
 		      	<h2>Location</h2>
     			<div id="map"></div>
 		      	<p></p>
@@ -65,6 +68,7 @@ class ShowHawker extends React.Component {
 		            </form>
        		    </div>
        		   	{allHawkerReviews}
+       		   	</div>
 		      	<script src="/script.js"></script>
 		      	<script async defer
 				  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0eLkjdHUsR_SX4Eon_CP8OdW4Qa4aztU&callback=initMap">

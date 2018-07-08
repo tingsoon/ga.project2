@@ -22,10 +22,10 @@ class Home extends React.Component {
 					    		</form>
 				    		</div>
 				    		<div className="col-sm">
-				    			<p>Search for Hawker Centres in Singapore</p>
+				    			<p>Hawker Centres in Singapore</p>
 				    			<form className="getAllHawkers" method="GET" action='/hawkercentres'>
 				                <div className="buttonDiv">
-				                	<input className="getAllHawkers" type="submit" value="View Hawkers" />
+				                	<input className="getAllHawkers" type="submit" value="View All" />
 					            </div>
 		            			</form>
 				    		</div>
