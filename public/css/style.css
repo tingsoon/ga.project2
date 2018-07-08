@@ -2,6 +2,13 @@ div {
   font-family: 'Source Serif Pro', serif;
 }
 
+#searchHome {
+  text-align: center;
+}
+
+#regionHeading {
+  text-align: center;
+}
 
 #background-image {
 	background-image: url(/wallpaperhawker.jpg);
@@ -25,6 +32,8 @@ div {
   position: relative;
   bottom: 30px;
   left: 18px;
+  font-size: 30px;
+
 }
 
 #north {
@@ -93,7 +102,7 @@ div {
   margin: 0 auto;
 }
 
-.col-4 {
+.col-sm-4 {
   padding: 20px;
 }
 
@@ -108,7 +117,7 @@ div {
 
 #map {
   height: 400px;
-  width: 400px;
+  width: 800px;
 }
 
 #textbox {
@@ -125,7 +134,21 @@ div {
 	width: 500px;
 }
 
+.card-body {
+  background-color: white;
+}
+
 #imgpic {
     min-height: 280px;
     min-width: 200px;
 }
+
+.navbar-toggler {
+  float: right;
+}
+
+
+
+
+
+

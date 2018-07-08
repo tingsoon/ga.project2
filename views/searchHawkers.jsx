@@ -11,13 +11,12 @@ class SearchHawkers extends React.Component {
 
   		return (
   			
-  			<div className="col-4">
-          <div className="col-sm pic_container">
-            <img src ={hawker.img} className="img-thumbnail" id="imgpic"/>
+  			<div className="col-sm-4">
+          <div className="card">
+            <img className="card-img-top" src ={hawker.img} alt="Card image cap" id="imgpic"/>
           </div>
-	  			<div className="text">
-	  				<p>{hawker.name}</p>
-	  			</div>
+	  			<div className="card-body">
+	  		     <h5 className="card-title">{hawker.name}</h5>
 	  			 <div>
 		            <form className="goToHawkerCentre" method="POST" action={'/hawkercentres/'+hawker.id+'?_method=PUT'}>
 		                <input type="hidden" name="goToHawkerCentre" />
@@ -25,8 +24,9 @@ class SearchHawkers extends React.Component {
 		                    <input className="goToHawkerCentre" type="submit" value="View Hawker Centre" />
 		                </div>
 		            </form>
-          		</div>
-          		<p></p>
+          	</div>
+          </div>
+          	<p></p>
   			</div>
   			
   		)

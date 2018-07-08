@@ -11,6 +11,7 @@ class Home extends React.Component {
         </NavbarContainer>
 	    	<div>
 	    		<div className="jumbotron">
+	    			<div className="container" id="searchHome">
 		    		<h1 className="display-3">WELCOME TO HAWKERLAH!</h1>
 		    		<div className="container">
 			    		<div className="row">
@@ -31,21 +32,22 @@ class Home extends React.Component {
 				    		</div>
 			    		</div>
 		    		</div>
+		    		</div>
 		    	<div>
 		    	<hr className="my-4" />
-		    	<h2 className="display-4">Search by Regions</h2>
+		    	<h3 id="regionHeading">Search by Regions</h3>
 	    		<div>
 				  	<div className="container" id="imagebox">
 
 				  		<div className="row-1">
 				  		<a href="http://localhost:3000/hawkers/north">
-				  		<div className="location" id="north">
+				  		<div className="location rounded" id="north">
 				  			<span className="location-name">North</span>
 				  		</div>
 				  		</a>
 
 				  		<a href="http://localhost:3000/hawkers/east">
-				  		<div className="location" id="east">
+				  		<div className="location rounded" id="east">
 				  			<span className="location-name">East</span>
 				  		</div>
 				  		</a>
@@ -53,13 +55,13 @@ class Home extends React.Component {
 
 				  		<div className="row-2">
 				  		<a href="http://localhost:3000/hawkers/central">
-				  		<div className="location" id="central">
+				  		<div className="location rounded" id="central">
 				  			<span className="location-name">Central</span>
 				  		</div>
 				  		</a>
 
 				  		<a href="http://localhost:3000/hawkers/west">
-				  		<div className="location" id="west">
+				  		<div className="location rounded" id="west">
 				  			<span className="location-name">West</span>
 				  		</div>
 				  		</a>
