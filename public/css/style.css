@@ -2,6 +2,67 @@ div {
   font-family: 'Source Serif Pro', serif;
 }
 
+#homePageLogo {
+  height: 500px;
+  width: 500px;
+  background-image: url(/homeLogo.png);
+  background-position: center;
+}
+
+#home-page {
+  text-align: center;
+  margin: 7em auto;
+  width: 500px;
+  position: fixed;
+  left: 36.5%;
+}
+
+.homeText {
+  width: 500px;
+  text-align: center;
+}
+
+#loginPage {
+  width: 500px;
+  position: relative;
+  top: 250px;
+}
+
+.loginLogo {
+  background-image: url(/hawkerLogo.png);
+  background-size: contain;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 28%;
+  margin-bottom: 50px;
+}
+
+#pleaseSignIn {
+  text-align: center;
+  text-transform: bold;
+}
+
+.userLogo {
+  background-image: url(/user.png);
+  background-size: contain;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  left: 28%;
+  margin-bottom: 50px;
+}
+
+.newUserPage {
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+  top: 200px;
+}
+
 #searchHome {
   text-align: center;
 }
@@ -19,7 +80,7 @@ div {
 }
 
 #navLogo {
-  background-image: url(/hawkerLogo-2.png);
+  background-image: url(/hawkerLogo.png);
   background-size: cover;
   background-position: center;
   height: 75px;
@@ -30,7 +91,7 @@ div {
 #navWord {
   display: inline-block;
   position: relative;
-  bottom: 30px;
+  bottom: 23px;
   left: 18px;
   font-size: 30px;
 
@@ -143,8 +204,8 @@ div {
     min-width: 200px;
 }
 
-.navbar-toggler {
-  float: right;
+#navBar-words {
+  color: white;
 }
 
 

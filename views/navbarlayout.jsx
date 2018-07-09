@@ -12,12 +12,30 @@ class LayoutContainer extends React.Component {
           </div>
           <div id="navWord"><strong>HawkerLah</strong></div>
           </a>
-              <form className="logout form-inline" method="POST" action="/users/logout?_method=DELETE">
-                  <input type="hidden" name="logout" className="form-control mr-sm-2"/>
-                  <div className="buttonDiv">
-                      <input className="logout" type="submit" value="Logout" />
-                  </div>
-              </form>
+            <a className="py-2 d-none d-md-inline-block" >
+            <div id="navBar-words">About</div>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkercentres">
+            <div id="navBar-words">All Hawkers</div>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkers/north">
+            <div id="navBar-words">North Hawkers</div>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkers/east">
+            <div id="navBar-words">East Hawkers</div>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkers/central">
+            <div id="navBar-words">Central Hawkers</div>
+            </a>
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkers/west">
+            <div id="navBar-words">West Hawkers</div>
+            </a>
+            <form className="logout form-inline" method="POST" action="/users/logout?_method=DELETE">
+                <input type="hidden" name="logout" className="form-control mr-sm-2"/>
+                <div className="buttonDiv">
+                    <input className="logout" type="submit" value="Logout" />
+                </div>
+            </form>
           </div>
         </nav> 
       </header> 

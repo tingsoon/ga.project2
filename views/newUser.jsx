@@ -6,12 +6,15 @@ class NewUser extends React.Component {
 
     return (
     	<LayoutContainer>
-	    	<div>
-	    		<h1>Create New User</h1>
+	    	<div className="newUserPage">
+				<div className="userLogo">
+				</div>
 	    		<form action="/users/new" method="POST">
-	    			<input className="username" type="text" name="username" placeholder="username" />
-	    			<input className="password" type="text" name="password" placeholder="password" />
-	    			<input className="submit" type="submit" />
+	    			<h1 className="h3 mb-3 font-weight-normal" id="pleaseSignIn">Enter User Details</h1>
+	    			<input className="username form-control" type="text" name="username" placeholder="username" />
+	    			<input className="password form-control" type="text" name="password" placeholder="password" />
+	    			<p></p>
+	    			<button className="submit btn btn-lg btn-secondary btn-block" type="submit" >Submit</button>
 	    		</form>
 	    	</div>
     	</LayoutContainer>

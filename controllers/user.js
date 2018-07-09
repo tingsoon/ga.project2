@@ -89,6 +89,12 @@ module.exports = function(db){
 
   };
 
+  const homePage = (request, response) => {
+
+    response.render('homePage');
+
+  };
+
   const loginData = (request, response) => {
 
     let username = request.body.username;
@@ -147,6 +153,7 @@ module.exports = function(db){
     create : create,
     created : created,
     loginPage: loginPage,
+    homePage: homePage,
     loginData : loginData,
     logout : logout
   }

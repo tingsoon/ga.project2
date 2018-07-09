@@ -43,5 +43,5 @@ module.exports = (app, db) => {
 
 
 	// default login page
-	app.get('/', users.loginPage);
+	app.get('/', users.homePage);
 };
