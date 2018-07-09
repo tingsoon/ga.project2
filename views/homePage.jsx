@@ -24,10 +24,10 @@ class HomePage extends React.Component {
     	</div>
         </a>
         <div className="homeText">
-    	<h1 className="cover-heading">Eat Hawker Lah</h1>
-    	<p className="lead">"TEXT text text"</p>
+    	<h1 className="cover-heading homeWords"><strong>EAT HAWKER LAH</strong></h1>
+    	<p className="lead homeWords">YOUR LOCAL HAWKER BLOG</p>
     	<p className="lead">
-    		<a href="http://localhost:3000/users/login" className="btn btn-lg btn-secondary">Login</a>
+    		<a href="http://localhost:3000/users/login" className="btn btn-lg btn-secondary homeWords">Login</a>
     	</p>
         </div>
         </div>

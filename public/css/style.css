@@ -5,8 +5,9 @@ div {
 #homePageLogo {
   height: 500px;
   width: 500px;
-  background-image: url(/homeLogo.png);
+  background-image: url(/homeLogo2.png);
   background-position: center;
+  background-size: contain;
 }
 
 #home-page {
@@ -28,6 +29,10 @@ div {
 
 #homeSubmit {
   margin-left: 10px;
+}
+
+.homeWords {
+  font-family: 'Open Sans', sans-serif;
 }
 
 /*Styling for slideshow*/

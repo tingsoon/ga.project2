@@ -10,7 +10,7 @@ class LayoutContainer extends React.Component {
           <a className="navbar-brand" href="http://localhost:3000/home" >
           <div id="navLogo">
           </div>
-          <div id="navWord"><strong>HawkerLah</strong></div>
+          <div id="navWord"><strong>EatHawkerLah</strong></div>
           </a>
             <a className="py-2 d-none d-md-inline-block" >
             <div id="navBar-words">About</div>
