@@ -1,17 +1,26 @@
 var React = require('react');
-var LayoutContainer = require('./layout.jsx');
+var LayoutHomePage = require('./layoutHomePage.jsx');
 
 class HomePage extends React.Component {
   render() {
 
     return (
 
-    	<LayoutContainer>
-        
+    	<LayoutHomePage>
+        <body id="page" cz-shortcut-listen="true">
+            <ul className="cb-slideshow">
+                <li><span>Image 01</span></li>
+                <li><span>Image 02</span></li>
+                <li><span>Image 03</span></li>
+                <li><span>Image 04</span></li>
+                <li><span>Image 05</span></li>
+                <li><span>Image 06</span></li>
+            </ul>
+        <div class="container">
     	<div className="cover" id="home-page">
         <div className="container" id="home-container">
         <a href="http://localhost:3000/users/login">
-    	<div className="logo" id="homePageLogo">
+    	<div className="logo rounded-circle" id="homePageLogo">
     	</div>
         </a>
         <div className="homeText">
@@ -23,8 +32,9 @@ class HomePage extends React.Component {
         </div>
         </div>
     	</div>
-
-    	</LayoutContainer>
+        </div>
+        </body>
+    	</LayoutHomePage>
 
     );
 

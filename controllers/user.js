@@ -143,7 +143,7 @@ module.exports = function(db){
     response.clearCookie('user_id');
     response.clearCookie('username');
     response.clearCookie('logged_in');
-    response.redirect('/users/login');
+    response.redirect('/');
 
   };
 
