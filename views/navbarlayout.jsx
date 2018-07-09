@@ -32,9 +32,7 @@ class LayoutContainer extends React.Component {
             </a>
             <form className="logout form-inline" method="POST" action="/users/logout?_method=DELETE">
                 <input type="hidden" name="logout" className="form-control mr-sm-2"/>
-                <div className="buttonDiv">
-                    <input className="logout" type="submit" value="Logout" />
-                </div>
+                    <button className="logout btn btn-secondary" type="submit">Logout</button>
             </form>
           </div>
         </nav> 

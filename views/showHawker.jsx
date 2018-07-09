@@ -18,6 +18,7 @@ class ShowHawker extends React.Component {
 
   		return (
 	      	<div className="col-sm hawkerReviews">
+	      		<hr className="my-4" />
 	      		<h4>{review.title}</h4>
 	      	<ul className="list-unstyled">
 	      		<li>{review.username} </li>
@@ -62,9 +63,7 @@ class ShowHawker extends React.Component {
 		      	<div>
 		    		<form className="writeReview" method="GET" action={formAction}>
 	                <input type="hidden" name="writeReview" />
-	                <div className="buttonDiv">
-	                	<input className="writeReview" type="submit" value="Write a review" />
-		            </div>
+	                	<button className="writeReview btn btn-light" type="submit">Write a review</button>
 		            </form>
        		    </div>
        		   	{allHawkerReviews}

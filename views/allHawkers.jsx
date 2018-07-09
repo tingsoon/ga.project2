@@ -20,9 +20,7 @@ class ShowAllHawkers extends React.Component {
            <div>
                 <form className="goToHawkerCentre" method="POST" action={'/hawkercentres/'+hawker.id+'?_method=PUT'}>
                     <input type="hidden" name="goToHawkerCentre" />
-                    <div className="buttonDiv">
-                        <input className="goToHawkerCentre" type="submit" value="View Hawker Centre" />
-                    </div>
+                        <button className="goToHawkerCentre btn btn-secondary" type="submit">View Hawker Centre</button>
                 </form>
             </div>
           </div>

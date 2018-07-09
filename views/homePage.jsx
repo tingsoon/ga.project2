@@ -9,7 +9,7 @@ class HomePage extends React.Component {
     	<LayoutContainer>
         
     	<div className="cover" id="home-page">
-        <div className="container">
+        <div className="container" id="home-container">
         <a href="http://localhost:3000/users/login">
     	<div className="logo" id="homePageLogo">
     	</div>

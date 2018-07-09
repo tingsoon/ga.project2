@@ -18,16 +18,14 @@ class Home extends React.Component {
 				    		<div className="col-sm">
 				    			<p>Search for Hawker Centres</p>
 					    		<form action="/home" method="POST">
-					    			<input name="hawkerCentre" type="text" />
-					    			<input name="submit" type="submit" />
+					    			<input id="homeSearchHawker" name="hawkerCentre" type="text" />
+					    			<button className="btn btn-secondary" id="homeSubmit" name="submit" type="submit">Submit</button>
 					    		</form>
 				    		</div>
 				    		<div className="col-sm">
 				    			<p>Hawker Centres in Singapore</p>
 				    			<form className="getAllHawkers" method="GET" action='/hawkercentres'>
-				                <div className="buttonDiv">
-				                	<input className="getAllHawkers" type="submit" value="View All" />
-					            </div>
+				                	<button className="getAllHawkers btn btn-secondary" type="submit">View All</button>
 		            			</form>
 				    		</div>
 			    		</div>

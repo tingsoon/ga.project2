@@ -12,14 +12,20 @@ div {
 #home-page {
   text-align: center;
   margin: 7em auto;
-  width: 500px;
-  position: fixed;
-  left: 36.5%;
+  width: 50%;
 }
 
 .homeText {
   width: 500px;
   text-align: center;
+}
+
+#home-container {
+  width: 500px;
+}
+
+#homeSubmit {
+  margin-left: 10px;
 }
 
 #loginPage {
