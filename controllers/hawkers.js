@@ -19,8 +19,12 @@ module.exports = (db) => {
  	const home = (request, response) => {
 
 		let username = request.cookies.username;
+
+		if (request.cookies.user_id === undefined) {
+			response.redirect('/users/login');
+		} else {
  		response.render('home', {user : username});
- 		
+		}
 
  	};
 
@@ -30,7 +34,9 @@ module.exports = (db) => {
 
  		db.hawkers.searchHawker(input, (error, queryResult) => {
 
- 			if (error) {
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 2: ', error.stack);
  			} else {
 
@@ -58,8 +64,10 @@ module.exports = (db) => {
  		let smth;
 
  		db.hawkers.searchNorthHawkers(smth, (error, queryResult) => {
- 			
- 			if (error) {
+			 
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 1: ', error.stack);
  			} else { 
 
@@ -81,8 +89,10 @@ module.exports = (db) => {
  		let smth;
 
  		db.hawkers.searchWestHawkers(smth, (error, queryResult) => {
- 			
- 			if (error) {
+
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 1: ', error.stack);
  			} else { 
 
@@ -104,8 +114,10 @@ module.exports = (db) => {
  		let smth;
 
  		db.hawkers.searchEastHawkers(smth, (error, queryResult) => {
- 			
- 			if (error) {
+			 
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 1: ', error.stack);
  			} else { 
 
@@ -127,8 +139,10 @@ module.exports = (db) => {
  		let smth;
 
  		db.hawkers.searchCentralHawkers(smth, (error, queryResult) => {
- 			
- 			if (error) {
+			 
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 1: ', error.stack);
  			} else { 
 
@@ -152,7 +166,9 @@ module.exports = (db) => {
 
  			const hawkerData = queryResult.rows;
 
- 			if (error) {
+			 if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('query error 1: ', error.stack);
  			} else {
 
@@ -172,7 +188,9 @@ module.exports = (db) => {
 
  		db.hawkers.getHawkerCentre(hawkerId, (error, queryResult) => {
 
- 			if (error) {
+			if (request.cookies.user_id === undefined) {
+				response.redirect('/users/login');
+			} else if (error) {
  				console.error('error 2 getting hawker centre: ', error.message);
  			} else {
  				if (queryResult.rows.length > 0) {

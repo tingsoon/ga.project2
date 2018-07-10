@@ -21,9 +21,12 @@ module.exports = (db) => {
 
  		// console.log(request.params.id);
  		let hawkerId = parseInt(request.params.id);
- 		response.cookie('hawkerId', hawkerId);
+		response.cookie('hawkerId', hawkerId);
+		if (request.cookies.user_id === undefined) {
+			response.redirect('/users/login');
+		} else {
  		response.render('addReview');
-
+		}
  	};
 
  	const addReviewData = (request, response) => {
@@ -43,14 +46,21 @@ module.exports = (db) => {
 
  	const reviewAdded = (request, response) => {
 
- 		response.clearCookie('hawkerId');
- 		response.redirect('/home');
-
+		response.clearCookie('hawkerId');
+		if (request.cookies.user_id === undefined) {
+			response.redirect('/users/login');
+		} else {
+		response.redirect('/home');
+		}
  	};
 
  	const about = (request, response) => {
 
- 		response.render('about');
+		if (request.cookies.user_id === undefined) {
+			response.redirect('/users/login');
+		} else {
+		response.render('about');
+		}
  	};
 
 
