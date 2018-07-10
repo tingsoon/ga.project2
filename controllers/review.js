@@ -48,6 +48,11 @@ module.exports = (db) => {
 
  	};
 
+ 	const about = (request, response) => {
+
+ 		response.render('about');
+ 	};
+
 
 
 
@@ -60,7 +65,8 @@ module.exports = (db) => {
  	return {
  		showReviewForm,
  		addReviewData,
- 		reviewAdded
+ 		reviewAdded,
+ 		about
 
  	};
 

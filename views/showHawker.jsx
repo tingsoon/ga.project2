@@ -53,11 +53,17 @@ class ShowHawker extends React.Component {
 			      	<li>Address : {this.props.hawker.address} </li>
 			      	<li>Region : {this.props.hawker.region} </li>
 			      	<li>Number of Stalls : {this.props.hawker.cookedfoodstalls} </li>
-			      	<li>{this.props.hawker.description} </li>
 		      	</ul>
+		      	<h5 className="h5"><u>Description</u></h5>
+		      	<p>{this.props.hawker.description}</p>
 		      	</div>
 		      	<div className="container">
+		      	<div className="container">
+		      	<div className="row">
 		      	<h2>Location</h2>
+		      	<img src="/placeholder.png" id="locationLogo" />
+		      	</div>
+				</div>
     			<div id="map"></div>
 		      	<p></p>
 		      	<div>

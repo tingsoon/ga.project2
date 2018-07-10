@@ -38,9 +38,8 @@ module.exports = (app, db) => {
 	app.post('/hawkercentres/:id/review', review.addReviewData);
 	app.delete('/hawkercentres/reviewAdded', review.reviewAdded);
 
-
-
-
+	//about me
+	app.get('/about', review.about);
 
 	// default login page
 	app.get('/', users.homePage);

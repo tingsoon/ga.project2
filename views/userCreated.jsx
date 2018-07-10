@@ -6,13 +6,11 @@ class NewUser extends React.Component {
 
     return (
     	<LayoutContainer>
-	    	<div>
+	    	<div className="container reviewBox">
 	    		<h1>User Created</h1>
 		    		<form className="goBackLoginPage" method="GET" action='/users/login'>
 		                <input type="hidden" name="goBackLoginPage" />
-		                <div className="buttonDiv">
-		                	<input className="goBackLoginPage" type="submit" value="Return To Login Page." />
-			            </div>
+		                	<button className="goBackLoginPage btn btn-secondary" type="submit">Return to Login Page</button>
 		            </form>
 	    	</div>
     	</LayoutContainer>

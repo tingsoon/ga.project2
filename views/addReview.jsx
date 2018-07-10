@@ -12,7 +12,7 @@ class Review extends React.Component {
     	<LayoutContainer>
         <NavbarContainer>
         </NavbarContainer>
-	    	<div>
+	    	<div className="container reviewBox">
 	    		<div>
 	    		<h1>Add Review</h1>
 	    			<form action={formAction} method="POST">
@@ -24,7 +24,7 @@ class Review extends React.Component {
 		    			<textarea name="description" className="review form-control" id="textBox" placeholder="Description"></textarea>
 		    			</div>
 		    			<p></p>
-		    			<p>Ratings</p>
+		    			<p>Ratings (from 1 to 5)</p>
 		    			<select name="rating" id="example">
 						  <option value="1">1</option>
 						  <option value="2">2</option>

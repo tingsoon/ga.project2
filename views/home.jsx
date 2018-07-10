@@ -12,7 +12,7 @@ class Home extends React.Component {
 	    	<div>
 	    		<div className="jumbotron">
 	    			<div className="container" id="searchHome">
-		    		<h1 className="display-3">WELCOME TO EAT HAWKER LAH!</h1>
+		    		<h1 className="display-3 homeWelcome">WELCOME TO EAT HAWKER LAH!</h1>
 		    		<div className="container">
 			    		<div className="row">
 				    		<div className="col-sm">

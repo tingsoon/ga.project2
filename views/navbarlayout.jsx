@@ -12,7 +12,7 @@ class LayoutContainer extends React.Component {
           </div>
           <div id="navWord"><strong>EatHawkerLah</strong></div>
           </a>
-            <a className="py-2 d-none d-md-inline-block" >
+            <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/about">
             <div id="navBar-words">About</div>
             </a>
             <a className="py-2 d-none d-md-inline-block" href="http://localhost:3000/hawkercentres">

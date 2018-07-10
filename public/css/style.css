@@ -192,7 +192,6 @@ div {
 
 /*login page*/
 
-
 #loginPage {
   width: 500px;
   position: relative;
@@ -328,6 +327,11 @@ div {
   margin: 0 auto;
 }
 
+.homeWelcome {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62px;
+  font-weight: bold;
+}
 
 #imagebox {
   width: 1000px;
@@ -346,6 +350,12 @@ div {
 #listTitle {
   text-align: center;
 }
+
+#locationLogo {
+  height: 30px;
+  margin-left: 5px;
+}
+
 
 #map {
   height: 400px;
@@ -377,6 +387,14 @@ div {
 
 #navBar-words {
   color: white;
+}
+
+.reviewBox {
+  margin: 5em auto;
+}
+
+.aboutBox {
+  margin: 5em auto;
 }
 
 
