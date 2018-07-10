@@ -5,6 +5,8 @@ var NavbarContainer = require('./navbarlayout.jsx');
 class Home extends React.Component {
   render() {
 
+  	const user = this.props.user;
+
     return (
     	<LayoutContainer>
     	<NavbarContainer>
@@ -12,6 +14,7 @@ class Home extends React.Component {
 	    	<div>
 	    		<div className="jumbotron">
 	    			<div className="container" id="searchHome">
+	    			<h4>Hello, {user}</h4>
 		    		<h1 className="display-3 homeWelcome">WELCOME TO EAT HAWKER LAH!</h1>
 		    		<div className="container">
 			    		<div className="row">
@@ -38,13 +41,13 @@ class Home extends React.Component {
 				  	<div className="container" id="imagebox">
 
 				  		<div className="row-1">
-				  		<a href="http://localhost:3000/hawkers/north">
+				  		<a href="/hawkers/north">
 				  		<div className="location rounded" id="north">
 				  			<span className="location-name">North</span>
 				  		</div>
 				  		</a>
 
-				  		<a href="http://localhost:3000/hawkers/east">
+				  		<a href="/hawkers/east">
 				  		<div className="location rounded" id="east">
 				  			<span className="location-name">East</span>
 				  		</div>
@@ -52,13 +55,13 @@ class Home extends React.Component {
 				  		</div>
 
 				  		<div className="row-2">
-				  		<a href="http://localhost:3000/hawkers/central">
+				  		<a href="/hawkers/central">
 				  		<div className="location rounded" id="central">
 				  			<span className="location-name">Central</span>
 				  		</div>
 				  		</a>
 
-				  		<a href="http://localhost:3000/hawkers/west">
+				  		<a href="/hawkers/west">
 				  		<div className="location rounded" id="west">
 				  			<span className="location-name">West</span>
 				  		</div>

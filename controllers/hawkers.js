@@ -18,7 +18,9 @@ module.exports = (db) => {
  */
  	const home = (request, response) => {
 
- 		response.render('home');
+		let username = request.cookies.username;
+ 		response.render('home', {user : username});
+ 		
 
  	};
 
@@ -196,11 +198,14 @@ module.exports = (db) => {
  								response.render('showHawker', { hawker : hawkerData, reviews : hawkerReviews });
  							} else {
 
- 								hawkerNoReviews = result.rows;
- 								hawkerNoReviews.title = "No reviews yet";
- 								hawkerNoReviews.username = " ";
- 								hawkerNoReviews.ratings = " ";
- 								hawkerNoReviews.description = " ";
+ 								let hawkerNoReviews = result.rows;
+ 								// let hawkerNoReviews = { 
+ 								// 	title: "No reviews yet.",
+ 								// 	rating: "",
+ 								// 	username: "",
+ 								// 	description: ""
+ 								// };
+ 								
  								response.render('showHawker', { hawker : hawkerData, reviews : hawkerNoReviews });
  							}
  						}

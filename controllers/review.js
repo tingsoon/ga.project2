@@ -19,7 +19,7 @@ module.exports = (db) => {
 
  	const showReviewForm = (request, response) => {
 
- 		console.log(request.params.id);
+ 		// console.log(request.params.id);
  		let hawkerId = parseInt(request.params.id);
  		response.cookie('hawkerId', hawkerId);
  		response.render('addReview');
@@ -29,7 +29,7 @@ module.exports = (db) => {
  	const addReviewData = (request, response) => {
 
  		let hawkerId = parseInt(request.cookies['hawkerId']);
- 		console.log(hawkerId);
+ 		// console.log(request.body);
  		let input = request.body;
  		let username = request.cookies['username'];
 

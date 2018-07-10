@@ -25,7 +25,7 @@ class Review extends React.Component {
 					  <div className="card-body">
 					    <p className="card-text">I love food. Especially hawker food.</p>
 					    <p></p>
-					    <p className="card-text">I created this blog as part of my second project for the Web Development Immersive course in General Assembly, Singapore, as well as due to my love for cheap hawker foods.</p>
+					    <p className="card-text">I created this blog as part of my second project for the Web Development Immersive course in General Assembly, Singapore, as well as due to my love for cheap hawker foods :)</p>
 					  </div>
 					</div>
 				  </div>

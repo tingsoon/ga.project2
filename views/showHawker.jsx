@@ -6,13 +6,11 @@ class ShowHawker extends React.Component {
 
   render() {
 
-  	const hawker = this.props.hawker;
-  	// const reviews = this.props.reviews;
-  	// console.log(hawker);
+  	// const review = this.props.reviews;
+  	// console.log(review);
 
   	let formAction = '/hawkercentres/' + this.props.hawker.id + '/review';
   	const hidden={display:'none'}
-
 
   	const allHawkerReviews = this.props.reviews.map( function(review) {
 
@@ -21,7 +19,7 @@ class ShowHawker extends React.Component {
 	      		<hr className="my-4" />
 	      		<h4>{review.title}</h4>
 	      	<ul className="list-unstyled">
-	      		<li>{review.username} </li>
+	      		<li>{review.username}</li>
 		      	<li>{review.rating}</li>
 	      	</ul>
 	      	<p>{review.description}</p>

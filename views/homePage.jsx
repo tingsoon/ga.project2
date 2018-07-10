@@ -19,7 +19,7 @@ class HomePage extends React.Component {
         <div class="container">
     	<div className="cover" id="home-page">
         <div className="container" id="home-container">
-        <a href="http://localhost:3000/users/login">
+        <a href="/users/login">
     	<div className="logo rounded-circle" id="homePageLogo">
     	</div>
         </a>
@@ -27,7 +27,7 @@ class HomePage extends React.Component {
     	<h1 className="cover-heading homeWords"><strong>EAT HAWKER LAH</strong></h1>
     	<p className="lead homeWords">YOUR LOCAL HAWKER BLOG</p>
     	<p className="lead">
-    		<a href="http://localhost:3000/users/login" className="btn btn-lg btn-secondary homeWords">Login</a>
+    		<a href="/users/login" className="btn btn-lg btn-secondary homeWords">Login</a>
     	</p>
         </div>
         </div>

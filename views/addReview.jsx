@@ -25,13 +25,27 @@ class Review extends React.Component {
 		    			</div>
 		    			<p></p>
 		    			<p>Ratings (from 1 to 5)</p>
-		    			<select name="rating" id="example">
-						  <option value="1">1</option>
-						  <option value="2">2</option>
-						  <option value="3">3</option>
-						  <option value="4">4</option>
-						  <option value="5">5</option>
-						</select>
+
+						<div className="form-check form-check-inline">
+						  <input className="form-check-input" type="radio" name="rating" id="inlineRadio1" value="1" />
+						  <label className="form-check-label" for="inlineRadio1" name="rating">1</label>
+						</div>
+						<div className="form-check form-check-inline">
+						  <input className="form-check-input" type="radio" name="rating" id="inlineRadio2" value="2" />
+						  <label className="form-check-label" for="inlineRadio1" name="rating">2</label>
+						</div>
+						<div className="form-check form-check-inline">
+						  <input className="form-check-input" type="radio" name="rating" id="inlineRadio3" value="3" />
+						  <label className="form-check-label" for="inlineRadio1" name="rating">3</label>
+						</div>
+						<div className="form-check form-check-inline">
+						  <input className="form-check-input" type="radio" name="rating" id="inlineRadio4" value="4" />
+						  <label className="form-check-label" for="inlineRadio1" name="rating">4</label>
+						</div>
+						<div className="form-check form-check-inline">
+						  <input className="form-check-input" type="radio" name="rating" id="inlineRadio5" value="5" />
+						  <label className="form-check-label" for="inlineRadio1" name="rating">5</label>
+						</div>
 						<p></p>
 		    			<button type="submit" className="btn btn-primary">Submit</button>
 	    		</form>
