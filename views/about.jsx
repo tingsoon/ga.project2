@@ -15,6 +15,7 @@ class Review extends React.Component {
         	<div className="container aboutBox">
 	        	<div className="row">
 				  <div className="col-8">
+					<p><u><strong>Credits</strong></u></p>
 				  <p>Created using react-express</p>
 				  <p>Api from Google Maps, Data.gov.sg(https://data.gov.sg/dataset/hawker-centres), HawkerAPI from Jae Lee.</p>
 				  <p>Slideshow source code (https://tympanus.net)</p>
