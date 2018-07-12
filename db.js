@@ -42,7 +42,7 @@ if( process.env.DATABASE_URL ){
   database: 'hawkerlah',
   port: 5432,
 };
-// }
+}
 
 const pool = new pg.Pool(configs);
 
