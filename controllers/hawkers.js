@@ -52,7 +52,6 @@ module.exports = (db) => {
 					const data = {
 						search_hawkers: queryRows
 					};
-
 					response.render('searchHawkers', data);
 				}
 			}
